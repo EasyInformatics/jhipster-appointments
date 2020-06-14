@@ -47,6 +47,14 @@ public class CacheConfiguration {
             createCache(cm, com.devangelist.appointments.domain.User.class.getName());
             createCache(cm, com.devangelist.appointments.domain.Authority.class.getName());
             createCache(cm, com.devangelist.appointments.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.devangelist.appointments.domain.House.class.getName());
+            createCache(cm, com.devangelist.appointments.domain.House.class.getName() + ".users");
+            createCache(cm, com.devangelist.appointments.domain.House.class.getName() + ".appointments");
+            createCache(cm, com.devangelist.appointments.domain.ServiceType.class.getName());
+            createCache(cm, com.devangelist.appointments.domain.ServiceType.class.getName() + ".services");
+            createCache(cm, com.devangelist.appointments.domain.Service.class.getName());
+            createCache(cm, com.devangelist.appointments.domain.Service.class.getName() + ".appointments");
+            createCache(cm, com.devangelist.appointments.domain.Appointment.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

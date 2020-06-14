@@ -1,0 +1,24 @@
+{
+  "appointmentsApp": {
+    "house": {
+      "home": {
+        "title": "Houses",
+        "createLabel": "Create a new House",
+        "createOrEditLabel": "Create or edit a House",
+        "notFound": "No Houses found"
+      },
+      "created": "A new House is created with identifier {{ param }}",
+      "updated": "A House is updated with identifier {{ param }}",
+      "deleted": "A House is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete House {{ id }}?"
+      },
+      "detail": {
+        "title": "House"
+      },
+      "number": "Number",
+      "user": "User",
+      "appointment": "Appointment"
+    }
+  }
+}

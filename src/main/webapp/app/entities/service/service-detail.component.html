@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="service">
+            <h2><span jhiTranslate="appointmentsApp.service.detail.title">Service</span> {{ service.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="appointmentsApp.service.name">Name</span></dt>
+                <dd>
+                    <span>{{ service.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="appointmentsApp.service.description">Description</span></dt>
+                <dd>
+                    <span>{{ service.description }}</span>
+                </dd>
+                <dt><span jhiTranslate="appointmentsApp.service.duration">Duration</span></dt>
+                <dd>
+                    <span>{{ service.duration }}</span>
+                </dd>
+                <dt><span jhiTranslate="appointmentsApp.service.serviceType">Service Type</span></dt>
+                <dd>
+                    <div *ngIf="service.serviceType">
+                        <a [routerLink]="['/service-type', service.serviceType?.id, 'view']">{{ service.serviceType?.name }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/service', service.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

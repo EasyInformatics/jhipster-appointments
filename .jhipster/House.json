@@ -1,0 +1,34 @@
+{
+  "name": "House",
+  "fields": [
+    {
+      "fieldName": "number",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "house",
+      "relationshipName": "user"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "appointment",
+      "otherEntityRelationshipName": "house",
+      "relationshipName": "appointment"
+    }
+  ],
+  "changelogDate": "20200614093839",
+  "entityTableName": "house",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

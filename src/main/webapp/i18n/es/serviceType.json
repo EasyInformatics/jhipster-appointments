@@ -1,0 +1,23 @@
+{
+  "appointmentsApp": {
+    "serviceType": {
+      "home": {
+        "title": "Service Types",
+        "createLabel": "Crear nuevo Service Type",
+        "createOrEditLabel": "Crear o editar Service Type",
+        "notFound": "Ningún Service Types encontrado"
+      },
+      "created": "Un nuevo Service Type ha sido creado con el identificador {{ param }}",
+      "updated": "Un Service Type ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Service Type ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Service Type {{ id }}?"
+      },
+      "detail": {
+        "title": "Service Type"
+      },
+      "name": "Name",
+      "service": "Service"
+    }
+  }
+}

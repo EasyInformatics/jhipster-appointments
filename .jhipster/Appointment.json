@@ -1,0 +1,36 @@
+{
+  "name": "Appointment",
+  "fields": [
+    {
+      "fieldName": "startDateTime",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "house",
+      "otherEntityRelationshipName": "appointment",
+      "relationshipName": "house",
+      "otherEntityField": "number"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "service",
+      "otherEntityRelationshipName": "appointment",
+      "relationshipName": "service",
+      "otherEntityField": "name"
+    }
+  ],
+  "changelogDate": "20200614094139",
+  "entityTableName": "appointment",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

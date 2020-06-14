@@ -1,0 +1,24 @@
+entity House {
+	number String,
+}
+
+entity ServiceType {
+	name String
+}
+
+entity Service {
+	name String,
+    description String,
+    duration Integer,
+}
+
+entity Appointment {
+	startDateTime Instant,
+}
+
+relationship OneToMany {
+	House to User{house(number)},
+    ServiceType to Service{serviceType(name)},
+    House to Appointment{house(number)},
+    Service to Appointment{service(name)}
+}

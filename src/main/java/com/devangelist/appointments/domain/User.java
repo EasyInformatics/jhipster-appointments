@@ -2,6 +2,7 @@ package com.devangelist.appointments.domain;
 
 import com.devangelist.appointments.config.Constants;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.HashSet;
@@ -103,6 +104,10 @@ public class User extends AbstractAuditingEntity implements Serializable {
         return login;
     }
 
+    @ManyToOne
+    @JsonIgnoreProperties(value = "users", allowSetters = true)
+    private House house;
+
     // Lowercase the login before saving it in database
     public void setLogin(String login) {
         this.login = StringUtils.lowerCase(login, Locale.ENGLISH);
@@ -194,6 +199,19 @@ public class User extends AbstractAuditingEntity implements Serializable {
 
     public void setAuthorities(Set<Authority> authorities) {
         this.authorities = authorities;
+    }
+
+    public House getHouse() {
+        return house;
+    }
+
+    public User house(House house) {
+        this.house = house;
+        return this;
+    }
+
+    public void setHouse(House house) {
+        this.house = house;
     }
 
     @Override

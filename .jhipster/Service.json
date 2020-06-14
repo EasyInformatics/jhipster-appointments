@@ -1,0 +1,43 @@
+{
+  "name": "Service",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "duration",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "appointment",
+      "otherEntityRelationshipName": "service",
+      "relationshipName": "appointment"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "serviceType",
+      "otherEntityRelationshipName": "service",
+      "relationshipName": "serviceType",
+      "otherEntityField": "name"
+    }
+  ],
+  "changelogDate": "20200614094039",
+  "entityTableName": "service",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
